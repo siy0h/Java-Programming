@@ -1,0 +1,3 @@
+/Users/serenaiyoha/Documents/CSI2372/Assignment4/cmake-build-debug/CMakeFiles/Assignment4.dir
+/Users/serenaiyoha/Documents/CSI2372/Assignment4/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/serenaiyoha/Documents/CSI2372/Assignment4/cmake-build-debug/CMakeFiles/rebuild_cache.dir
