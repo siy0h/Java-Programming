@@ -1,0 +1,118 @@
+serenaiyoha@Serenas-MBP Assignment3 % java Rover                                                                                                                                                         
+Do you want to move forward? 
+yes
+Start state: rest
+The rover the rover is ready to move because you pressed the left pedal once
+Current State: move
+Start state: move
+The rover waiting for your next to move commmand because you pressed the left pedal once
+Current State: timer
+How long are pressing the left pedal
+8
+Start state: timer
+You are going accelerate backwards because you pressed the left pedal for more than 5 seconds
+Current State accelerateBackwards
+Type option number. 
+ 1) press left pedal 3 times 
+ 2) press both pedals
+2
+Start state: accelerateBackwards
+You are going to decelerate because you pressed both pedals
+Current State: decelerate
+Type option number. 
+ 1) press both pedals 
+ 2) continue decelerating
+1
+Start state: decelerate
+The rover the rover is ready to move because you pressed both pedals at once
+Current State: move
+Start state: move
+The rover waiting for your next to move commmand because you pressed the left pedal once
+Current State: timer
+serenaiyoha@Serenas-MBP Assignment3 % javac Rover.java                                                                                                                                                   
+serenaiyoha@Serenas-MBP Assignment3 % java Rover                                                                                                                                                         
+Do you want to move forward? 
+yes
+
+ Start state: rest
+The rover the rover is ready to move because you pressed the left pedal once
+Current State: move
+
+ Start state: move
+The rover waiting for your next to move
+Current State: timer
+How long are pressing the left pedal
+87
+
+ Start state: timer
+You are going accelerate backwards because you pressed the left pedal for more than 5 seconds
+Current State accelerateBackwards
+Type option number. 
+ 1) press left pedal 3 times 
+ 2) press both pedals
+1
+
+ Start state: accelerateBackwards
+You are going at a constant speed backwards because you pressed the left pedal 3 times
+Current State: constantSpeedBackwards
+serenaiyoha@Serenas-MBP Assignment3 % javac Rover.java                                                                                                                                                   
+serenaiyoha@Serenas-MBP Assignment3 % java Rover                                                                                                                                                         
+Do you want to move forward? 
+yes
+
+ Start state: rest
+The rover the rover is ready to move because you pressed the left pedal once
+Current State: move
+
+ Start state: move
+The rover waiting for your next to move
+Current State: timer
+How long are pressing the left pedal
+3
+
+ Start state: timer
+You are going accelerate forward because you pressed the left pedal once
+Current State: accelerateForward
+Type option number. 
+ 1) right pedal twice 
+ 2)right pedal for more than 5 seconds
+2
+
+ Start state: accelerateForward
+You are going at a constant speed forward because you pressed the right pedal for more than 5 seconds
+Current State constantSpeedForward
+serenaiyoha@Serenas-MBP Assignment3 % javac Rover.java                                                                                                                                                   
+serenaiyoha@Serenas-MBP Assignment3 % java Rover                                                                                                                                                         
+Do you want to move forward? 
+yes
+
+ Start state: rest
+The rover the rover is ready to move because you pressed the left pedal once
+Current State: move
+
+ Start state: move
+The rover waiting for your next to move
+Current State: timer
+How long are pressing the left pedal
+1
+
+ Start state: timer
+You are going accelerate forward because you pressed the left pedal once
+Current State: accelerateForward
+Type option number. 
+ 1) right pedal twice 
+ 2)right pedal for more than 5 seconds
+1
+
+ Start state: accelerateForward
+You are going to decelerate because you pressed the right pedal twice
+Current State: decelerate
+Type option number. 
+ 1) press both pedals 
+ 2) continue decelerating
+2
+
+ Start state: decelerate
+The rover is going to rest because you have decelerated to zero
+Current State:rest
+serenaiyoha@Serenas-MBP Assignment3 % 

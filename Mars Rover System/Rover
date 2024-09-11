@@ -1,0 +1,121 @@
+public class Rover{
+
+	String state;
+
+	public Rover(){
+
+		private Pedal left = new Pedal();
+		private Pedal right = new Pedal();
+		private state = new String("idle");
+		private long speed = 0;
+	}
+
+	public void setState(String state){
+		state = state;
+	}
+
+
+
+	public void Rest(){
+		System.out.println("Start state: " state);
+
+		if(state == "idle"){
+			System.out.println("Current State:" state);
+
+		} else if(speed == 0){
+			state = "idle";
+			System.out.println("Current State:" state);
+		}
+	}
+
+//ask how long to hold pedal for?
+
+	public void move(){
+		left.press(1);
+		if (left.sensor.showHold() == 1){
+			setState("timer");
+			System.out.println("Current State: " + state);
+			speed ++;
+		} 
+	}
+
+	public void accelerateForward(){
+		if(state == "timer" && left.sensor.showHold() ==  1){
+			setState("accelerateForward");
+			speed++;
+			System.out.println("Current State: " + state);
+		} else if (speed == 12){
+			decelerate();
+		}
+	}
+
+	public void constantSpeedForward(){
+		//how long is the hold
+		if (state == "timer" && right.sensor.showHold()>= 5) {
+			setState("constantSpeedForward");
+			System.out.println("Current State " + state);
+		}
+
+	}
+
+	public void accelerateBackwards(){
+		//ask how long they want to hold
+		if (state == "timer" && left.sensor.showHold()>= 5) {
+			speed++;
+			setState("accelerateBackwards");
+			System.out.println("Current State " + state);
+		} else if (speed == 12){
+			decelerate();
+		}
+
+		// where do you want to do
+	}
+
+	public void constantSpeedBackwards(){
+		left.press(3);
+
+		if (state == "accelerateBackwards" && left.showHold() == 3){
+				setState("constantSpeedBackwards");
+				System.out.println("Current State: " + state);
+		}
+	}
+
+	public void decelerate(){
+
+
+		if (state == "accelerateForward" || && left.showHold() == 2){
+				//right.press(2);
+				setState("decelerate");
+				System.out.println("Current State: " + state);
+		} else if (speed == 12){
+				speed --;
+		}
+	}
+
+
+
+
+
+
+}
+
+public class Pedal{
+
+		public Pedal(){
+			Button sensor = new Button();
+
+		}
+
+
+//for when you hold on the button
+
+
+
+		public void press(long pressFrequency){
+			sensor.changeHold(pressTime);
+		}
+
+		public void hold(long holdTime){
+			sensor.changeHold(holdTime);
+		}
+	}
